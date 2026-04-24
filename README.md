@@ -12,4 +12,5 @@
     8. Creating a New Theme
     9. PHP Functions
     10. PHP Arrays
-    
+## Bagian 4: Wordpress Specific PHP
+    11. The Famous "Loop" in Wordpress
