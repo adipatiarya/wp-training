@@ -32,7 +32,7 @@ services:
       WORDPRESS_DB_PASSWORD: wordpress
       WP_DEBUG: true
     volumes:
-      - ./wp-content:/var/www/html/wp-content
+      - ./wp-content/themes/fictional-univeristy-theme:/var/www/html/wp-content/themes/fictional-univeristy-theme
     depends_on:
       - db
 volumes:
