@@ -33,6 +33,7 @@ services:
       WP_DEBUG: true
     volumes:
       - ./wp-content/themes/fictional-univeristy-theme:/var/www/html/wp-content/themes/fictional-univeristy-theme
+      - ./wp-content/plugins/secure-custom-fields:/var/www/html/wp-content/plugins/secure-custom-fields
     depends_on:
       - db
 volumes:

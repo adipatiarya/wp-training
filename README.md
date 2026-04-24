@@ -14,3 +14,5 @@
     10. PHP Arrays
 ## Bagian 4: Wordpress Specific PHP
     11. The Famous "Loop" in Wordpress
+    12. Header & Footer
+    13. Optional: If you want To Skip to One of the final Chapters In the Course
