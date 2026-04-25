@@ -18,3 +18,5 @@
     13. Optional: If you want To Skip to One of the final Chapters In the Course
     14. Convert Static HTML Template into WordPress(Part 1)
     15. Convertt Static HTML Template into Wordpress (Part 2)
+## Bagian 5: Pages
+    16. Interior Page Template
