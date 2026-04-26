@@ -26,3 +26,5 @@
     20. A Few Quick Edits / Improvements
     21. Navigation Menus
     22. Navigation Menus (Continued)
+## Bagian 6: Building the Blog Section
+    23. Blog Listing Page (index.php vs front-page.php)
