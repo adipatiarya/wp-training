@@ -20,3 +20,4 @@
     15. Convertt Static HTML Template into Wordpress (Part 2)
 ## Bagian 5: Pages
     16. Interior Page Template
+    17. Parent & Childres Pages
