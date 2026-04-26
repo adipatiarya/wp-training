@@ -23,3 +23,4 @@
     17. Parent & Childres Pages
     18. To Echo or Not To Echo
     19. Menu of Child Page Links
+    20. A Few Quick Edits / Improvements
