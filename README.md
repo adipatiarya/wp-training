@@ -21,3 +21,5 @@
 ## Bagian 5: Pages
     16. Interior Page Template
     17. Parent & Childres Pages
+    18. To Echo or Not To Echo
+    19. Menu of Child Page Links

@@ -15,3 +15,17 @@ function university_features() {
 }
 
 add_action('after_setup_theme', 'university_features');
+
+
+//custom gutenberg block category
+
+function enqueue_menu_order_panel() {
+    wp_enqueue_script(
+        'menu-order-panel',
+        get_template_directory_uri() . '/build/menu-order-panel.js',
+        array('wp-plugins', 'wp-edit-post', 'wp-components', 'wp-data', 'wp-element'),
+        '1.1',
+        true
+    );
+}
+add_action('enqueue_block_editor_assets', 'enqueue_menu_order_panel');
