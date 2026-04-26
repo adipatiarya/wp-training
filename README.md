@@ -29,3 +29,4 @@
 ## Bagian 6: Building the Blog Section
     23. Blog Listing Page (index.php vs front-page.php)
     24. Blog Continued
+    25. Blog Archives(archive.php)
