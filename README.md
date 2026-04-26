@@ -30,3 +30,5 @@
     23. Blog Listing Page (index.php vs front-page.php)
     24. Blog Continued
     25. Blog Archives(archive.php)
+    26. Custom Queries
+    27. Blog: Few Quick Edits & Improvement
