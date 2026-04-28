@@ -32,3 +32,6 @@
     25. Blog Archives(archive.php)
     26. Custom Queries
     27. Blog: Few Quick Edits & Improvement
+## Bagian 7: Events Post Type
+    28. Custom Post Types
+    29. Using The Modern Block Editor For Our Custom
