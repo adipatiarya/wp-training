@@ -31,3 +31,28 @@ function enqueue_menu_order_panel() {
 add_action('enqueue_block_editor_assets', 'enqueue_menu_order_panel');
 
 
+function university_adjust_queries($query) {
+   if( !is_admin() AND is_post_type_archive('event') AND $query->is_main_query() ) {
+        $args = array(
+            'meta_key' => 'event_date',
+            'orderby' => 'meta_value_num',
+            'order' => 'DESC',
+            'meta_query' => array(
+                array(
+                    'key' => 'event_date',
+                    'compare' => '>=',
+                    'value' => date('Ymd'),
+                    'type' => 'numeric'
+                )
+            )
+        );
+
+        foreach($args as $key => $value) {
+            $query->set($key, $value);
+        }; 
+   }
+
+}
+
+
+add_action('pre_get_posts', 'university_adjust_queries');

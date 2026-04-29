@@ -40,3 +40,4 @@
     32. Custom Fields
     33. A Note About The Wordpress Post Edit Screen
     34. Ordering (Sorting) Custom Queries
+    35. Manipulating Default URL Based Queries
