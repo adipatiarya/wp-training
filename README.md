@@ -36,3 +36,7 @@
     28. Custom Post Types
     29. Using The Modern Block Editor For Our Custom
     30. Displaying Custom Post Types
+    31. Quick Timeout: Misc Updates
+    32. Custom Fields
+    33. A Note About The Wordpress Post Edit Screen
+    34. Ordering (Sorting) Custom Queries
