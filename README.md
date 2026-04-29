@@ -41,3 +41,4 @@
     33. A Note About The Wordpress Post Edit Screen
     34. Ordering (Sorting) Custom Queries
     35. Manipulating Default URL Based Queries
+    36. Past Events Page(Qustom Query Pagination)
