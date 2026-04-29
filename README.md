@@ -42,3 +42,7 @@
     34. Ordering (Sorting) Custom Queries
     35. Manipulating Default URL Based Queries
     36. Past Events Page(Qustom Query Pagination)
+
+## Bagian 25: Plugin Development: PHP
+    123. Introduction to plugin development
+    124. Lets Create your first plugin
