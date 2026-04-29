@@ -35,3 +35,4 @@
 ## Bagian 7: Events Post Type
     28. Custom Post Types
     29. Using The Modern Block Editor For Our Custom
+    30. Displaying Custom Post Types
