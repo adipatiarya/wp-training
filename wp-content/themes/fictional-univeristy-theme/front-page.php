@@ -32,21 +32,11 @@
                 ]
             ]);
             while($events->have_posts()) {
-                $events->the_post(); ?>
-                 <div class="event-summary">
-                    <a class="event-summary__date t-center" href="#">
-                        <?php 
-                          $event_date = new DateTime(get_field('event_date'));
-                        ?>
-                        <span class="event-summary__month"><?php echo $event_date->format('M'); ?></span>
-                        <span class="event-summary__day"><?php echo $event_date->format('d'); ?></span>
-                    </a>
-                    <div class="event-summary__content">
-                        <h5 class="event-summary__title headline headline--tiny"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-                        <p><?php echo wp_trim_words(get_the_content(), 18); ?> <a href="<?php the_permalink(); ?>" class="nu gray">Learn more</a></p>
-                    </div>
-                </div> 
-            <?php } wp_reset_postdata(); ?>
+                $events->the_post();
+                get_template_part('template-parts/content', 'event');
+                 
+             } wp_reset_postdata(); 
+           ?>
 
           <p class="t-center no-margin"><a href="<?php echo site_url('/events'); ?>" class="btn btn--blue">View All Events</a></p>
         </div>
@@ -63,20 +53,8 @@
             );
             while ($blogPosts->have_posts()) {
 
-              $blogPosts->the_post(); ?>
-               <div class="event-summary">
-                    <a class="event-summary__date event-summary__date--beige t-center" href="#">
-                        <span class="event-summary__month"><?php the_time('M'); ?></span>
-                        <span class="event-summary__day"><?php the_time('d'); ?></span>
-                    </a>
-                    <div class="event-summary__content">
-                        <h5 class="event-summary__title headline headline--tiny"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-                        <p><?php if(has_excerpt()) { echo wp_trim_words(get_the_excerpt(), 18); } else { echo wp_trim_words(get_the_content(), 18); } ?> <a href="<?php the_permalink(); ?>" class="nu gray">Read more</a></p>
-                    </div>
-                </div>
-         
-
-            <?php } wp_reset_postdata();
+              $blogPosts->the_post(); 
+              get_template_part('template-parts/content', 'blog');}
           ?>
           <p class="t-center no-margin"><a href="<?php echo site_url('/blog'); ?>" class="btn btn--yellow">View All Blog Posts</a></p>
         </div>
