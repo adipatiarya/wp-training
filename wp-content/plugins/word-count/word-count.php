@@ -8,28 +8,6 @@
 
 class WordCountPlugin {
 
-    private $register_settings = [
-        'wcp_location' => [
-            'sanitize_callback' => 'sanitize_text_field',
-            'default' => '0'
-        ],
-        'wcp_headline' => [
-            'sanitize_callback' => 'sanitize_text_field',
-            'default' => 'Word Count'
-        ],
-        'wcp_wordcount' => [
-            'sanitize_callback' => 'sanitize_text_field',
-            'default' => '1'
-        ],
-        'wcp_charactercount' => [
-            'sanitize_callback' => 'sanitize_text_field',
-            'default' => '1'
-        ],
-        'wcp_readtime' => [
-            'sanitize_callback' => 'sanitize_text_field',
-            'default' => '1'
-        ]
-    ];
     private $locations = [
         [ 'value' => '0', 'label' => 'Beginning of the post' ],
         [ 'value' => '1', 'label' => 'End of the post' ]
@@ -41,13 +19,46 @@ class WordCountPlugin {
     }
 
     public function initialize_settings() {
+
+            
+        $register_settings = [
+            'wcp_location' => [
+                'sanitize_callback' => array($this, 'sanitize_location'),
+                'default' => '0'
+            ],
+            'wcp_headline' => [
+                'sanitize_callback' => 'sanitize_text_field',
+                'default' => 'Word Count'
+            ],
+            'wcp_wordcount' => [
+                'sanitize_callback' => 'sanitize_text_field',
+                'default' => '1'
+            ],
+            'wcp_charactercount' => [
+                'sanitize_callback' => 'sanitize_text_field',
+                'default' => '1'
+            ],
+            'wcp_readtime' => [
+                'sanitize_callback' => 'sanitize_text_field',
+                'default' => '1'
+            ]
+        ];
         add_settings_section('wcp_first_section', null, null, 'word-count');
          
-        foreach ($this->register_settings as $setting_name => $args) {
+        foreach ($register_settings as $setting_name => $args) {
             register_setting('wordcountplugin', $setting_name, $args);
             add_settings_field($setting_name, ucwords(str_replace('wcp_', '', $setting_name)), array($this, $setting_name . '_html'), 'word-count', 'wcp_first_section');
           
         }
+    }
+
+
+    public function sanitize_location($input) {
+        if($input !== '0' && $input !== '1') {
+            add_settings_error('wcp_location', 'wcp_location_error', 'Invalid location selected.', 'error');
+            return get_option('wcp_location');
+        }
+        return $input;
     }
 
     public function wcp_location_html() { ?>
