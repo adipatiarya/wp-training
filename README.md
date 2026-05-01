@@ -42,3 +42,7 @@
     34. Ordering (Sorting) Custom Queries
     35. Manipulating Default URL Based Queries
     36. Past Events Page(Qustom Query Pagination)
+## Bagian 8:  Program Post Type
+    37. Creating Relation ship 
+    38. Display relation ship
+    39. Qick program edit
