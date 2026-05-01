@@ -25,7 +25,43 @@
 
             <div class="generic-content"><?php the_content(); ?></div>
            
-            <?php 
+            <?php
+
+
+            $professors = new WP_Query([
+                'post_type' => 'professor',
+                'posts_per_page' => -1,
+                'orderby' => 'title',
+                'order' => 'ASC',
+                'meta_query' => [
+                    [
+                        'key' => 'related_programs',
+                        'compare' => 'LIKE',
+                        'value' => '"' . get_the_ID() . '"'
+                    ]
+                ]
+            ]);
+            if($professors->have_posts()) {
+                echo '<hr class="section-break">';
+                echo '<h2 class="headline headline--medium">' . get_the_title() . ' Professors</h2>';
+                echo '<ul class="professor-cards">';
+    
+                while($professors->have_posts()) {
+                    $professors->the_post(); ?>
+                    <li class="professor-card__list-item">
+                        <a class="professor-card" href="<?php the_permalink(); ?>">
+                            <img class="professor-card__image" src="<?php the_post_thumbnail_url('professorLandscape'); ?>" alt="<?php the_title(); ?>">
+                            <span class="professor-card__name"><?php the_title(); ?></span>
+                        </a>
+                    </li>
+                   
+                <?php 
+                }
+                echo '</ul>';
+                
+               wp_reset_postdata();
+            }
+
             $events = new WP_Query([
                 'post_type' => 'event',
                 'posts_per_page' => 2,
@@ -61,13 +97,13 @@
                             <span class="event-summary__day"><?php echo $event_date->format('d'); ?></span>
                         </a>
                         <div class="event-summary__content">
-                            <h5 class="event-summary__title headline headline--tiny"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
+                            <h5 class=""><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
                             <p><?php echo wp_trim_words(get_the_content(), 18); ?> <a href="<?php the_permalink(); ?>" class="nu gray">Learn more</a></p>
                         </div>
                     </div> 
                 <?php } 
             }
-            wp_reset_postdata(); ?>
+             ?>
         </div>
     <?php }
     

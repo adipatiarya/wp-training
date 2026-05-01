@@ -5,6 +5,7 @@ function check_required_plugins() {
     // Daftar plugin + dokumentasi
     $required_plugins = [
         'secure-custom-fields/secure-custom-fields.php' => 'https://downloads.wordpress.org/plugin/secure-custom-fields.6.8.3.zip',
+        'regenerate-thumbnails/regenerate-thumbnails.php' => 'https://downloads.wordpress.org/plugin/regenerate-thumbnails.3.1.4.zip',
     ];
 
     $inactive_plugins = [];

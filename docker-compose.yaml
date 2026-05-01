@@ -34,7 +34,10 @@ services:
     volumes:
       - ./wp-content/themes/fictional-univeristy-theme:/var/www/html/wp-content/themes/fictional-univeristy-theme
       - ./wp-content/plugins/secure-custom-fields:/var/www/html/wp-content/plugins/secure-custom-fields
+      - ./wp-content/plugins/regenerate-thumbnails:/var/www/html/wp-content/plugins/regenerate-thumbnails
       - ./wp-content/mu-plugins:/var/www/html/wp-content/mu-plugins
+      - ./wp-content/uploads:/var/www/html/wp-content/uploads
+      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
     depends_on:
       - db
 volumes:

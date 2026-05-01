@@ -43,6 +43,12 @@
     35. Manipulating Default URL Based Queries
     36. Past Events Page(Qustom Query Pagination)
 ## Bagian 8:  Program Post Type
-    37. Creating Relation ship 
-    38. Display relation ship
+    37. Creating Relationships Between Content
+    38. Display Relationships(FE)
     39. Qick program edit
+## Bagian 9: Professors Post Type
+    40. Quick Note About the Next Lesson
+    41. Professors Post Type
+    42. Featured Image(Post Thumbnail)
+    43. Featured Image Sizes & Cropping
+    44. Page Banner Dynamic Background Image
