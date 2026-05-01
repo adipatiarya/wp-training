@@ -52,7 +52,7 @@
     42. Featured Image(Post Thumbnail)
     43. Featured Image Sizes & Cropping
     44. Page Banner Dynamic Background Image
-33 Bagian 10: Cleaner Code(Less Duplication)
+## Bagian 10: Cleaner Code(Less Duplication)
     45. Note About PHP Warning in the next lesson
     46. Reduce Duplicate Code - Create Our own Function
     47. Solution to 'Undefined array key' Warnings
